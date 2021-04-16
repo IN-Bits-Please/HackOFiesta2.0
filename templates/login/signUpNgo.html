@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% block body %}
 <section class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center register-photo" style="background: linear-gradient(5deg, rgb(0,103,224), rgb(0,163,255));height: 40%;">
     <div class="form-container bg-white" style="margin-top: 45px;margin-bottom: 45px;height: 40vh;">
         <form action="/login/signUpNgo" method="POST">
@@ -36,10 +37,11 @@
                 <input class="form-control" name="password_repear" type="password" style="margin-bottom: 20px;" placeholder="Confirm Password">
             </div>
             <div class="form-row">
-                <div class="col-md-6" style="margin-top: 20px;">
-                    <button class="btn btn-primary btn-block d-lg-flex justify-content-lg-center" type="submit" style="color: #263222;">Sign Up</button>
+                <div class="col-md-12" style="margin-top: 20px">
+                    <button class="btn btn-primary btn-block d-lg-flex justify-content-lg-center" type="submit" style="color: white;">Sign Up</button>
                 </div>
             </div>
         </form>
     </div>
 </section>
+{% endblock body %}
