@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-    <title>Project</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>{% block title %}{% endblock title %}</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/fonts/ionicons.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/gradient-navbar-1.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/gradient-navbar.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/Sleek-Registration-Section.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
   </head>
+
   <body>
-    <h1>Hello World</h1>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <nav class="navbar navbar-dark navbar-expand-md" id="app-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="icon ion-ios-arrow-left" id="brand-logo"></i></a
+        ><button
+          data-toggle="collapse"
+          class="navbar-toggler"
+          data-target="#navcol-1"
+        >
+          <span class="sr-only">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">HOME</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Workshops</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Profiles</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block body %}{% endblock body %}
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
   </body>
 </html>
